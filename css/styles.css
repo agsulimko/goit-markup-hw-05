@@ -11,7 +11,7 @@
   --color-background-team: #f4f4fd;  
   --bd-gradient:linear-gradient(rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7));
-  --transition-duration:250ms;
+  --transition-duration:3250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -183,6 +183,8 @@ transition-timing-function: var(--transition-timing-function);}
 .contacts-link:focus {
   color: #404bbf;
 }
+
+
 /* =================Main page Header=================*/
 
 /*==================Main page - Hero image=================*/
@@ -235,6 +237,9 @@ transition-timing-function: var(--transition-timing-function);}
 .hero-btn:hover,
 .hero-btn:focus {background-color:var(--color-OCEAN) ;}
 
+
+
+
 /* ========Modal Window========= */
 .backdrop { 
 position:fixed;
@@ -244,20 +249,18 @@ width: 100%;
 height: 100%;
 background-color:rgba(46, 47, 66, 0.4);
 opacity: 1;
-transition-property: opacity;
-transition-duration: 600ms;
+transition-property: opacity, visibility;
+transition-duration: 250ms;
 transition-timing-function:cubic-bezier(0.23, 1, 0.320, 1);
-
-
 }
 .backdrop.is-hidden{
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
- 
 }
  
 .backdrop.is-hidden .modal{
-  transform: translate(-50%, -50%) scale(0.5) ;
+ transform: translate(-50%, -50%) scale(0.4); 
 }
 
  .modal{
@@ -270,12 +273,13 @@ transition-timing-function:cubic-bezier(0.23, 1, 0.320, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
-  transition-property: opacity;
-  transition-duration: 400ms;
+  transition-property: transform; 
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
  }
 
 .hero-btn-close{
+  display:flex;
   position: absolute;
   top: 24px;
   right: 24px;
@@ -285,10 +289,31 @@ transition-timing-function:cubic-bezier(0.23, 1, 0.320, 1);
   cursor: pointer;
   background-color: #E7E9FC;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-image: url(../images/close.svg );
-  background-repeat: no-repeat;
-  background-position: center;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color, border-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);   
 }
+
+.hero-btn-close:hover,
+.hero-btn-close:focus{
+  background-color:var(--color-OCEAN) ;
+  border-color: var(--color-OCEAN);
+}
+
+  .icon-modal-close {  
+  fill: var(--color-NAVYBLU);
+  transition-property: fill;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+} 
+
+.hero-btn-close:hover > .icon-modal-close,
+.hero-btn-close:focus > .icon-modal-close{
+  fill: var(--color-WHITE);
+} 
+
 
 
 /*=========Main page - Hero image*=================*/
