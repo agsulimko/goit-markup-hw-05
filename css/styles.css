@@ -667,8 +667,6 @@ transition-timing-function: var(--transition-timing-function);}
   overflow: hidden;
 }
 
-
-
 .overlay {
   position: absolute;
   top: 0;
@@ -694,6 +692,7 @@ transition-timing-function: var(--transition-timing-function);}
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-Cloud);
+  overflow: auto;
 }
 
 
