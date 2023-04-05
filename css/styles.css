@@ -257,9 +257,8 @@ transition-timing-function: var(--transition-timing-function);
 
 
 .hero-btn:hover,
-.hero-btn:focus {background-color:var(--color-OCEAN) ;}
-
-
+.hero-btn:focus {
+  background-color:var(--color-OCEAN) ;}
 
 
 /* ========Modal Window========= */
